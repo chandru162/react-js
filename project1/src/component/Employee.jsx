@@ -1,35 +1,30 @@
 import React, { useState } from "react";
 
 function Employee() {
-  const [name, setname] = useState();
-  const [id, setid] = useState();
-  const [job, setjob] = useState();
+  const [name, setname] = useState('');
+  const [id, setid] = useState('');
+  const [job, setjob] = useState('');
+
+  const [list,setlist]=useState([]);
 
 
-
-const changeid=(e)=>{
-    setid(e.target.value)
-}
-
-const changename=(e)=>{
-    setname(e.target.value)
-}
 
 const changejob=(e)=>{
     setjob(e.target.value)
 }
 
-const handleClick=()=>{
-    console.log(id,name,job)
+const handleClick=(e)=>{
+  
+   console.log( setlist([...list,{id :id,name:name,job:job }]))
 }
   return (
     <div>
       <label>Employee ID :</label>
-      <input type="text" value={id} />
+      <input type="text" value={id} onChange={(e)=>{setid(e.target.value)}}/>
 
       <br />
       <label> Employee Name</label>
-      <input type="text" value={name} />
+      <input type="text" value={name} onChange={(e)=>{setname(e.target.value)}}/>
 
       <br />
       <select onChange={changejob}>
@@ -45,20 +40,28 @@ const handleClick=()=>{
 
       <h1>Employee List</h1>
 
-      {/* <div>
-        <table>
-          <tr>
-            <th>Employee ID</th>
-            <th>Employee Name</th>
-            <th>Employee Job</th>
-          </tr>
-          <tr>
-            <td>{id}</td>
-            <td>{name}</td>
-            <td>{job}</td>
-          </tr>
-        </table>
-      </div> */}
+       <div>
+        {/* <table>
+          
+            <thead>
+              <tr>
+              <th>Employee ID</th>
+              <th>Employee Name</th>
+              <th>Employee Job</th>
+              </tr>
+            </thead>
+          
+          
+            <tbody>
+              <tr>
+              <td>{x.id}</td>
+              <td>{x.name}</td>
+              <td>{x.job}</td>
+              </tr>
+            </tbody>
+          
+        </table> */}
+      </div> 
 
     </div>
   );

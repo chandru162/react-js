@@ -2,6 +2,7 @@ import React from "react";
 // import Hello from './component/Hello'
 import "./App.css";
 import "./index.css";
+import Employee from "./component/Employee";
 // import Hi from './component/Hi'
 // import Abc from './component/Abc'
 // import EventHandling from './component/EventHandling'
@@ -11,7 +12,7 @@ import "./index.css";
 // import Task2 from "./component/Task2";
 // import List from "./component/List";
 // import Style1 from "./component/Style1";
-import Converter from "./component/Coverter";
+// import Calculater from "./component/Calculater";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
       {/* <Task1></Task1> */}
       {/* <Task2></Task2> */}
       {/* <Style1 Admin ={true}/> */}
-      <Converter />
+      {/* <Calculater /> */}
+      <Employee></Employee>
     </div>
   );
 }

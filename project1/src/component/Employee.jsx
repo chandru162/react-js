@@ -4,6 +4,7 @@ function Employee() {
   const [name, setname] = useState('');
   const [id, setid] = useState('');
   const [job, setjob] = useState('');
+  const[show,setshow] = useState(true)
 
   const [list,setlist]=useState([]);
 
@@ -15,9 +16,12 @@ const changejob=(e)=>{
 
 const handleClick=(e)=>{
   
-   console.log( setlist([...list,{id :id,name:name,job:job }]))
+   setlist([...list,{id :id,name:name,job:job }])
 }
   return (
+    <>
+    <button></button>
+    
     <div>
       <label>Employee ID :</label>
       <input type="text" value={id} onChange={(e)=>{setid(e.target.value)}}/>
@@ -41,7 +45,8 @@ const handleClick=(e)=>{
       <h1>Employee List</h1>
 
        <div>
-        {/* <table>
+        
+         <table border={1}>
           
             <thead>
               <tr>
@@ -53,17 +58,18 @@ const handleClick=(e)=>{
           
           
             <tbody>
-              <tr>
+              {list.map(x => (<tr key={x.id}>
               <td>{x.id}</td>
               <td>{x.name}</td>
               <td>{x.job}</td>
-              </tr>
+              </tr>))}
             </tbody>
           
-        </table> */}
+        </table> 
       </div> 
 
     </div>
+    </>
   );
 }
 

@@ -1,7 +1,13 @@
 // import React, { useReducer } from "react";
 // import Hello from './component/Hello'
 import "./App.css";
-import Cart from "./component/Cart";
+// import ErrorComponent from "./component/ErrorComponent";
+// import Prodects from "./component/Prodects";
+// import Counter1 from "./component/Counter1";
+// import Counter2 from "./component/Counter2";
+
+// import Counters from "./component/Counters";
+// import Prodect from "./component/Prodect";
 // import Onfocus from "./component/Onfocus";
 // import Count_usememo from "./component/Count_usememo";
 import "./index.css";
@@ -79,7 +85,21 @@ function App() {
       {/* <Parant></Parant> */}           
       {/* <Count_usememo></Count_usememo> */}
       {/* <Onfocus></Onfocus> */}
-      <Cart></Cart>
+      {/* <Prodect></Prodect> */}
+      {/* <Counters></Counters> */}
+
+    {/* <Counter1 name={"Adam"}></Counter1> */}
+    {/* <Counter2></Counter2> */}
+    {/* <ErrorComponent>
+      <Prodects name={"Iphone"}/>
+    </ErrorComponent>
+    <ErrorComponent>
+      <Prodects name={"Redmi"}/>
+    </ErrorComponent>
+    <ErrorComponent>
+    <Prodects name={"samsung"}/>
+    </ErrorComponent> */}
+    
     </div>
   );
 }
